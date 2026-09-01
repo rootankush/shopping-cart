@@ -1,0 +1,20 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--accent-color);
+	height: 5rem;
+	padding: 0 150px;
+}
+
+nav {
+	display: flex;
+	gap: 3rem;
+}
+
+button {
+	color: var(--secondary-color);
+	background: none;
+	border: none;
+	font-family: "Montserrat", sans-serif;
+}
