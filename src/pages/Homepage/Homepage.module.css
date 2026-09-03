@@ -1,0 +1,96 @@
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.heading {
+	font-size: 10rem;
+	margin-top: 4rem;
+}
+
+.describtion {
+	font-size: 1.25rem;
+	color: var(--accent-color);
+	margin-top: 1rem;
+	margin-bottom: 4rem;
+}
+
+.wrapper {
+	width: 70%;
+	margin-inline: auto;
+	position: relative;
+	overflow: hidden;
+	height: 100px;
+	mask-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 1) 20%,
+		rgba(0, 0, 0, 1) 80%,
+		rgba(0, 0, 0, 0)
+	);
+}
+
+@keyframes scrollLeft {
+	to {
+		left: -200px;
+	}
+}
+
+.card {
+	width: 200px;
+	height: 100px;
+	/* background-color: red; */
+	border-radius: 6px;
+	position: absolute;
+	left: max(calc(200px * 8), 100%);
+	animation-name: scrollLeft;
+	animation-duration: 30s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.card1 {
+	animation-delay: calc(30s / 7 * (7 - 1) * -1);
+}
+
+.card2 {
+	animation-delay: calc(30s / 7 * (7 - 2) * -1);
+}
+
+.card3 {
+	animation-delay: calc(30s / 7 * (7 - 3) * -1);
+}
+
+.card4 {
+	animation-delay: calc(30s / 7 * (7 - 4) * -1);
+}
+
+.card5 {
+	animation-delay: calc(30s / 7 * (7 - 5) * -1);
+}
+
+.card6 {
+	animation-delay: calc(30s / 7 * (7 - 6) * -1);
+}
+
+.card7 {
+	animation-delay: calc(30s / 7 * (7 - 7) * -1);
+}
+
+.button {
+	padding: 0.75rem 2.25rem;
+	font-size: 2rem;
+	margin-top: 4rem;
+	background-color: var(--accent-color);
+	border-radius: 10px;
+	color: #ccc;
+	border: none;
+	text-decoration: none;
+}
+
+.button:hover {
+	color: var(--accent-color);
+	background-color: #ccc;
+}
