@@ -1,18 +1,28 @@
-header {
+.header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--accent-color);
 	height: 5rem;
 	padding: 0 150px;
+	position: sticky;
+	top: 0;
 }
 
-nav {
+.nav {
 	display: flex;
 	gap: 3rem;
 }
 
-button {
+.li {
+	display: inline-block;
+	color: var(--secondary-color);
+	padding: 0 20px;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.button {
 	color: var(--secondary-color);
 	background: none;
 	border: none;

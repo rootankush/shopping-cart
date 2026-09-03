@@ -1,21 +1,22 @@
-import "../Header/Header.css";
 import { ShoppingCart } from "lucide-react";
+import { Link } from "react-router-dom";
+import styles from "../Header/Header.module.css";
 
 export default function Header() {
   return (
-    <header>
-      <nav>
-        <button type="button" className="nav-btn">
-          Home
-        </button>
-        <button type="button" className="nav-btn">
-          Shop
-        </button>
-        <button type="button" className="nav-btn">
-          Cart
-        </button>
+    <header className={styles.header}>
+      <nav className={styles.nav}>
+        <Link to="/">
+          <li className={styles.li}>Home</li>
+        </Link>
+        <Link to="/shop">
+          <li className={styles.li}>Shop</li>
+        </Link>
+        <Link to="cart">
+          <li className={styles.li}>Cart</li>
+        </Link>
       </nav>
-      <button type="button">
+      <button type="button" className={styles.button}>
         <ShoppingCart />
       </button>
     </header>
