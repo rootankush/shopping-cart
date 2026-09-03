@@ -1,1 +1,38 @@
+@font-face {
+	font-family: "Montserrat";
+	src: url(./assets/fonts/Montserrat/Montserrat-Bold.woff2);
+	font-weight: 700;
+}
 
+@font-face {
+	font-family: "Montserrat";
+	src: url(./assets/fonts/Montserrat/Montserrat-Regular.woff2);
+	font-weight: 400;
+}
+
+:root {
+	--primary-color: #949ed1;
+	--secondary-color: #e4c4e4;
+	--accent-color: #121212;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	background-color: var(--primary-color);
+	height: 100vh;
+}
+
+.site-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.main-container {
+	flex: 1;
+}
