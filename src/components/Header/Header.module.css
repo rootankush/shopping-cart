@@ -22,6 +22,10 @@
 	font-weight: 400;
 }
 
+.li:hover {
+	text-decoration: underline;
+}
+
 .button {
 	color: var(--secondary-color);
 	background: none;
