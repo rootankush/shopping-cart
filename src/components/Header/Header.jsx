@@ -12,7 +12,7 @@ export default function Header() {
         <Link to="/shop">
           <li className={styles.li}>Shop</li>
         </Link>
-        <Link to="cart">
+        <Link to="/cart">
           <li className={styles.li}>Cart</li>
         </Link>
       </nav>
