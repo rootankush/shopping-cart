@@ -8,16 +8,23 @@ function Shoppage() {
   const [dataIsLoaded, setDataIsLoaded] = useState(false);
 
   useEffect(() => {
-    axios.get("https://fakestoreapi.com/products").then((res) => {
-      setItems(res.data);
-      setDataIsLoaded(true);
-    });
-  });
+    axios
+      .get("https://fakestoreapi.com/products")
+      .then((res) => {
+        const initializedItems = res.data.map((item) => ({
+          ...item,
+          quantity: 0,
+        }));
+        setItems(initializedItems);
+        setDataIsLoaded(true);
+      })
+      .catch((error) => setError(error));
+  }, []);
 
   if (!dataIsLoaded) {
     return (
       <>
-        <h1>Please wait some time.....</h1>
+        <h1 className={styles.waiting}>Please wait some time.....</h1>
       </>
     );
   }
@@ -25,13 +32,7 @@ function Shoppage() {
   return (
     <div className={styles.container}>
       {items.map((item) => (
-        <Card
-          key={item.id}
-          title={item.title}
-          price={item.price}
-          image={item.image}
-          category={item.category}
-        ></Card>
+        <Card key={item.id} item={item}></Card>
       ))}
     </div>
   );
