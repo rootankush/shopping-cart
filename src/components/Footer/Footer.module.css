@@ -1,4 +1,4 @@
-footer {
+.footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -6,6 +6,6 @@ footer {
 	height: 5rem;
 }
 
-h5 {
+.h5 {
 	color: var(--secondary-color);
 }
