@@ -3,7 +3,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	color: var(--accent-color);
-	background-color: var(--secondary-color);
+	background-color: whitesmoke;
 	border-radius: 12px;
 	border: 1px solid var(--accent-color);
 	padding: 1.5rem;
