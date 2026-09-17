@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Card from "../../components/Card/Card";
 import styles from "../Shoppage/Shoppage.module.css";
 
-function Shoppage() {
+function Shoppage({ handleAddToCart }) {
   const [items, setItems] = useState([]);
   const [dataIsLoaded, setDataIsLoaded] = useState(false);
 
@@ -28,11 +28,14 @@ function Shoppage() {
       </>
     );
   }
-
   return (
     <div className={styles.container}>
       {items.map((item) => (
-        <Card key={item.id} item={item}></Card>
+        <Card
+          key={item.id}
+          item={item}
+          handleAddToCart={handleAddToCart}
+        ></Card>
       ))}
     </div>
   );

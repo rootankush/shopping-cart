@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import styles from "../Card/Card.module.css";
 
-function Card({ item, handleIncrement }) {
+function Card({ item, handleAddToCart }) {
   const [localQuantity, setLocalQuantity] = useState(0);
-
-  const sendData = () => {
-    handleIncrement(item, localQuantity);
-  };
 
   return (
     <form className={styles.card}>
@@ -29,7 +25,11 @@ function Card({ item, handleIncrement }) {
             onChange={(e) => setLocalQuantity(e.target.value)}
           />
         </div>
-        <button className={styles.button} type="button" onClick={sendData}>
+        <button
+          className={styles.button}
+          type="button"
+          onClick={() => handleAddToCart(item, localQuantity)}
+        >
           Add to Cart
         </button>
       </div>
