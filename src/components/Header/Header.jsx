@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../Header/Header.module.css";
 
-export default function Header({ indicator }) {
+export default function Header({ length }) {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -18,8 +18,12 @@ export default function Header({ indicator }) {
         </Link>
       </nav>
       <button type="button" className={styles.button}>
-        <ShoppingCart />
-        <p className={styles.indicator}>{indicator}</p>
+        <Link to="/cart">
+          <li className={styles.indicatorLink}>
+            <ShoppingCart />
+            <p className={styles.indicator}>{length}</p>
+          </li>
+        </Link>
       </button>
     </header>
   );

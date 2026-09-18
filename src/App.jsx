@@ -8,6 +8,7 @@ import Shoppage from "./pages/Shoppage/Shoppage";
 
 function App() {
   const [selectedItems, setSelectedItems] = useState([]);
+  const length = selectedItems.length;
 
   function handleAddToCart(obj, numberOfItems) {
     const exists = selectedItems.find((item) => item.id === obj.id);
@@ -27,15 +28,13 @@ function App() {
     }
   }
 
-  console.log(selectedItems);
-
   function handleRemove(obj) {
     setSelectedItems(selectedItems.filter((item) => item !== obj));
   }
 
   return (
     <div className="site-wrapper">
-      <Header />
+      <Header length={length} />
       <main className="main-container">
         <Routes>
           <Route path="/" element={<Homepage />} />
